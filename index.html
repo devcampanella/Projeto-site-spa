@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <link rel="shortcut icon" href="img/logo.png">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ExpletusSansRegular.css">
+    
+    
+    <link rel="stylesheet" href="nivo-slider/themes/default/default.css">   
+    <link rel="stylesheet" href="nivo-slider/nivo-slider.css">     
+
+    <script src="nivo-slider/jquery-1.11.1.min.js"></script>
+    <script src="nivo-slider/jquery.nivo.slider.js"></script>
+
+    <script>
+
+        //quando a página for carregada
+        $(window).load(function() {
+            
+            var fechado = false;
+            
+            $('#banner').nivoSlider();
+            
+            //$("#opacidade,#popup").delay(2000).fadeIn();
+            
+           // $("#opacidade").delay(1000).fadeIn();
+            //$("#popup").delay(1500).fadeIn();
+            
+            //fechar automaticamente após 5 segundos
+            setTimeout(function(){
+            fechado = true;
+            $("#opacidade,#popup").fadeOut()
+            }, 5000);
+            
+            
+            $(window).scroll(function(){
+                
+                if(fechado == false){
+                
+                    //se a qtd rolada for maior que a altura do logo
+                    if($(window).scrollTop() > $("#logo").height()){
+                        $("#opacidade,#popup").fadeIn();                    
+                    }
+                
+                }
+            });
+            
+            
+            //ao clicar no elemento com a class fechar
+            $(".fechar,#opacidade").click(function(){              
+                $("#opacidade,#popup").fadeOut();    
+                fechado = true; //armazena que foi fechado
+            });//fim do click
+            
+        }); //fim do load
+
+    </script>
+        
+    
+</head>
+<body>
+   
+    <div id="popup">
+        <span class="fechar"> FECHAR </span>
+        <img src="img/popup.jpg" alt="">
+    </div>
+    
+    <div id="opacidade"></div>
+    
+    <div id="total">
+        
+        <header id="topo">
+            
+            <div id="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            
+            <nav id="menu">
+                <a href="#">Home</a>
+                <a href="#">Quem Somos</a>
+                <a href="#">Serviços</a>
+                <a href="#">Clientes</a>
+                <a href="#">Contato</a>
+            </nav>
+            
+        </header>        
+        
+        <div class="theme-default">
+            <div id="banner">
+                <img src="img/banner.jpg" alt="" data-thumb="img/banner.jpg">
+                <img src="img/banner2.jpg" alt="" data-thumb="img/banner2.jpg">
+                <img src="img/banner3.jpg" alt="" data-thumb="img/banner3.jpg">            
+            </div>
+        </div>
+        
+        <article id="destaque">
+            <h1>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum ante eu lectus gravida commodo.”</h1>
+            
+            <p>Ana Santos</p>            
+        </article>        
+        
+        <div>
+            <section class="coluna">
+                <h2>Nossos Serviços</h2>
+                <img src="img/imagem-servicos.jpg" alt="">
+                <a href="#" class="botao">Saiba mais</a>
+            </section>    
+
+            <section class="coluna">
+                <h2>Especial Dia da Noiva</h2>
+                <img src="img/imagem-dia-da-noiva.jpg" alt="">
+                <a href="#" class="botao">Saiba mais</a>
+            </section>    
+
+            <section class="coluna">
+                <h2>Ambiente Bella Estética</h2>
+                <img src="img/imagem-ambiente.jpg" alt="">
+                <a href="#" class="botao">Saiba mais</a>
+            </section>    
+        </div>
+        
+        <footer id="rodape">
+            Tel: (21) 3322-4455 / 98788-5544 <br>
+            Avenida Rio Branco, 185 - Sala 324 - Centro - Rio de Janeiro
+        </footer>
+        
+    </div>
+    
+</body>
+</html>

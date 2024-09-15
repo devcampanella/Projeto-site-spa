@@ -1,0 +1,15 @@
+https://everythingfonts.com/font-face
+http://docs.dev7studios.com/article/12-getting-started-with-the-nivo-slider-jquery-plugin
+https://jquery.com/
+http://www.w3schools.com/
+
+
+Nivo Slider
+http://docs.dev7studios.com/article/12-getting-started-with-the-nivo-slider-jquery-plugin
+
+Outros links:
+http://tympanus.net/codrops/2012/04/05/slideshow-with-jmpress-js/
+http://wowslider.com/
+http://jquery.com/
+http://www.w3schools.com/jquery/default.asp
+http://livrosdomaujor.com.br/jquery/jq3/
